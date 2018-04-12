@@ -45,8 +45,7 @@ def turn(board)
    if position_taken?(board, index)
      return index
    else
-     return "invalid"
-     puts "Please enter 1-9:"
-      input = gets.strip
+     puts "invalid"
+     turn(board)
    end
 end
