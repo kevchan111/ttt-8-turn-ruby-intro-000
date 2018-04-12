@@ -43,7 +43,7 @@ def turn(board)
    index = input_to_index(input)
    valid_move?(board , index)
    if position_taken?(board, index)
-     return index
+    
    else
      puts "invalid"
      turn(board)
