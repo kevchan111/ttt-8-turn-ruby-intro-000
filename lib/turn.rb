@@ -17,9 +17,9 @@ def move(display_board, index, value)
 end
 
 def position_taken?(board, index)
-  if index < 0 
-     return false 
-  end 
+  if index < 0
+     return false
+  end
 
 if board[index] == " " || board[index] == "" || board[index] == nil
   return true
@@ -44,6 +44,7 @@ index = input_to_index(input)
  if valid_move?(board , index)
    display_board(board)
  else
-   puts "Please enter 1-9:"
+   puts "invalid"
+   turn(board)
  end
 end
