@@ -16,27 +16,24 @@ def move(display_board, index, value)
   display_board[index] = value
 end
 
-
 def position_taken?(board, index)
-   if index >= 0 && index <= 8
-    return false
-  else
-    return true
- end
+  if index <= 0
+     return false
+  end
 
 if board[index] == " " || board[index] == "" || board[index] == nil
-  return false
-elsif board[index] == "X" || board[index] == "O"
   return true
+elsif board[index] == "X" || board[index] == "O"
+  return false
 end
 end
 
 
 def valid_move?(board , index)
  if position_taken?(board , index)
-    return false
-  else
     return true
+  else
+    return false
  end
 end
 
